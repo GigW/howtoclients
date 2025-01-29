@@ -43,7 +43,7 @@ export default function Home() {
     }
 
     // Insert the new lead into the Supabase table
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('leads')
       .insert([{ title, description, source }]);
 
